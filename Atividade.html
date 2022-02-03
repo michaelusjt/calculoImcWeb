@@ -9,8 +9,8 @@
 		<fieldset>
 			<legend>Índice de Massa Corporal</legend>
 			
-			<label for="kilos">Informe o seu peso:</label>
-			<input name="kilos" type="text" /><br><br>
+			<label for="peso">Informe o seu peso:</label>
+			<input name="peso" type="text" /><br><br>
 		
 			<label for="metros">Informe a sua altura:</label>
 			<input name="metros" type="text" /><br><br>
@@ -27,14 +27,14 @@
     		// pegando o id do formulario
     		var formulario = document.getElementById("formulario");	
 
-    		var kilos  		= +formulario.kilos.value;
+    		var peso  		= +formulario.peso.value;
     		var metros 		= +formulario.metros.value;
     		
      		// Pegando a altura
     		var altura = (metros * 100) / 100;
     		 
     		// Calculamndo o IMC
-    		var imc = kilos / (altura * altura);
+    		var imc = peso / (altura * altura);
     		
     		// o metodo toFixed fixa apenas duas casas decimais apos o ponto.
     		formulario.imc.value = imc.toFixed(2);
@@ -65,7 +65,7 @@
     		}
     		else
     		{
-    			alert('Gordo');
+    			alert('Informações inválidas');
     		}
     	}
     </script>
